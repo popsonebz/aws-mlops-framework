@@ -16,6 +16,8 @@ jobs:
 
     - name: run-tests
       id: build-sdk
+      env:
+        AWS_DEFAULT_REGION: us-east-1
       run: |
         cd source
         chmod +x ./run-all-tests.sh
