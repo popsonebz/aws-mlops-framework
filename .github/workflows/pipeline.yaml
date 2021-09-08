@@ -1,0 +1,22 @@
+name: CI/CD Build mlops framework
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  Unit-Test:
+    name: unit-test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: run-tests
+      id: build-sdk
+      run: |
+        cd source
+        chmod +x ./run-all-tests.sh
+        ./run-all-tests.sh
