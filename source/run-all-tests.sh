@@ -31,6 +31,7 @@ setup_python_env() {
 	echo "Initiating virtual environment"
 	source .venv-test/bin/activate
 	echo "Installing python packages"
+        pip3 install wheel
 	pip3 install -r requirements-test.txt
 	echo "deactivate virtual environment"
 	deactivate
